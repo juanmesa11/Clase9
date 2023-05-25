@@ -1,1 +1,6 @@
 juan;juan;123456;123456;1001469998;juan@gmail.com;a;a;a;a;a;a
+juan;juan;1234;1234;1001469998;juan@gmail.com;a;a;a;aa;a;a
+ana;ana;1234;1234;1001469998;ana@gmail.com;a;a;a;aa;a;a
+ana;ana;1234;1234;1001469998;ana@gmail.com;a;a;a;aa;a;a
+ana;ana;1234;1234;1001469998;ana@gmail.com;a;a;a;aa;a;a
+ana;ana;1234;1234;1001469998;ana@gmail.com;a;a;a;aa;a;a
