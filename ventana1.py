@@ -6,6 +6,7 @@ from PyQt5.QtWidgets import QMainWindow, QDesktopWidget, QLabel, QHBoxLayout, QF
 from PyQt5 import QtGui, QtCore
 from PyQt5.QtCore import Qt
 from cliente import Cliente
+from ventana2 import Ventana2
 
 
 class Ventana1(QMainWindow):
@@ -328,8 +329,18 @@ class Ventana1(QMainWindow):
                                             "margin-top: 40px;")
         self.botonRecuperar.clicked.connect(self.accion_botonRecuperar)
 
+        # Hacemos el botón para continuar en la ventana sigueinte:
+        self.botonContinuar = QPushButton("Continuar")
+        self.botonContinuar.setFixedWidth(90)
+        self.botonContinuar.setStyleSheet("background-color: #FF0000;"
+                                          "color: #FFFFFF;"
+                                          "padding: 10px;"
+                                          "margin-top: 40px;")
+        self.botonContinuar.clicked.connect(self.accion_botonContinuar)
+
         # Agregamos los botones al Layout ladoIzquierdo:
         self.ladoDerecho.addRow(self.botonBuscar, self.botonRecuperar)
+        self.ladoDerecho.addRow(self.botonContinuar)
 
         # Agregamos el layout ladoDerecho al layout horizontal:
         self.horizontal.addLayout(self.ladoDerecho)
@@ -378,6 +389,10 @@ class Ventana1(QMainWindow):
         # Establecemos el layout para la ventana de dialogo:
         self.ventanaDialogo.setLayout(self.vertical)
 
+    def accion_botonContinuar(self):
+        self.hide()
+        self.ventana2 = Ventana2(self)
+        self.ventana2.show()
 
     def accion_botonLimpiar(self):
         self.nombreCompleto.setText('')
