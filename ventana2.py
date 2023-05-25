@@ -6,6 +6,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QDesktopWidget, QLabel, Q
 from PyQt5 import QtGui
 
 from cliente import Cliente
+from ventana3 import Ventana3
 
 
 class Ventana2(QMainWindow):
@@ -175,6 +176,16 @@ class Ventana2(QMainWindow):
 
         self.botones.idClicked.connect(self.metodo_accionBotones)
 
+        self.botonFormaTabular = QPushButton("Forma Tabular ")
+        self.botonFormaTabular.setFixedWidth(100)
+        self.botonFormaTabular.setStyleSheet("Background-color: #FF0000;"
+                                             "color: #000000;"
+                                             "padding: 10px;"
+                                             "margin-top: 10px;"
+                                             )
+        self.botonFormaTabular.clicked.connect(self.metodo_accionFormaTabular)
+        self.vertical.addWidget(self.botonFormaTabular)
+
         # ---Boton Volver---
 
         self.botonVolver = QPushButton("Volver")
@@ -198,6 +209,11 @@ class Ventana2(QMainWindow):
     def metodo_botonVolver(self):
         self.hide()
         self.ventanaAnterior.show()
+
+    def metodo_accionFormaTabular(self):
+        self.hide()
+        self.ventana3 = Ventana3(self)
+        self.ventana3.show()
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
