@@ -344,7 +344,7 @@ class Ventana1(QMainWindow):
         self.ventanaDialogo = QDialog(None, QtCore.Qt.WindowSystemMenuHint | QtCore.Qt.WindowTitleHint)
 
         # Poner el icono:
-        self.ventanaDialogo.setWindowIcon(QtGui.QIcon("imagenes/flore.png"))
+        self.ventanaDialogo.setWindowIcon(QtGui.QIcon("imagenes/img.png"))
 
         # Definimos el tamaño de la ventana:
         self.ventanaDialogo.resize(300, 150)
@@ -367,7 +367,7 @@ class Ventana1(QMainWindow):
         self.mensaje = QLabel("")
 
         # Le ponemos estilo al label mensaje:
-        self.mensaje.setStyleSheet("background-color: #A22F88; color: #FFFFFF; padding: 10px;")
+        self.mensaje.setStyleSheet("background-color: #FF0000; color: #FFFFFF; padding: 10px;")
 
         # agregamos el label de mensajes
         self.vertical.addWidget(self.mensaje)
@@ -678,7 +678,6 @@ class Ventana1(QMainWindow):
                 self.nombreCompleto.text() + ";"
                 + self.usuario.text() + ";"
                 + self.contra.text() + ";"
-                + self.contra2.text() + ";"
                 + self.documento.text() + ";"
                 + self.correo.text() + ";"
                 + self.pregunta1.text() + ";"
